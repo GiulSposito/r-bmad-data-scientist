@@ -1,10 +1,10 @@
 # r-bmad-data-scientist
 
-Repositório para desenvolvimento de um módulo BMAD que implementa o ciclo de vida completo de projetos de Data Science em R, seguindo as melhores práticas do ecossistema moderno (Tidyverse + Tidymodels + Quarto + Vetiver).
+Repositório do módulo **RDS (R Data Science)** para BMAD — um framework completo que implementa o ciclo de vida de projetos de Data Science em R, seguindo as melhores práticas do ecossistema moderno (Tidyverse + Tidymodels + Quarto + Vetiver).
 
 ## 🎯 Objetivo
 
-Criar um módulo BMAD através do BMB (BMAD Builder) que orquestre o workflow de 10 fases documentado em [`data-science-lifecycle-framework.md`](data-science-lifecycle-framework.md):
+Módulo BMAD que orquestra o workflow de 10 fases de Data Science em R:
 
 1. Setup & Planejamento
 2. Importação & Inspeção
@@ -17,26 +17,50 @@ Criar um módulo BMAD através do BMB (BMAD Builder) que orquestre o workflow de
 9. Comunicação
 10. Deploy & Monitoramento
 
+**Framework implementado através de 4 agentes especializados e 7 workflows.**
+
 ## 📦 Estrutura
 
 ```
 /
-├── _bmad/                          # Framework BMAD (não versionado)
-│   ├── core/                       # Módulo core + bmad-master
-│   ├── bmb/                        # Builder para criar módulos
-│   └── rds/               # FUTURO: Módulo a desenvolver
+├── _bmad/                          # Framework BMAD
+│   ├── core/                       # Módulo core + bmad-master (não versionado)
+│   ├── bmb/                        # Builder para criar módulos (não versionado)
+│   └── rds/                        # ✅ Módulo RDS (versionado)
+│       ├── config.yaml             # Configuração do módulo
+│       ├── README.md               # Documentação do módulo
+│       ├── TODO.md                 # Roadmap de implementação
+│       ├── agents/                 # 4 agent specs
+│       │   ├── ada.spec.md         # Project Architect (Phases 1-3)
+│       │   ├── grace.spec.md       # Data Scientist (Phases 4-5)
+│       │   ├── alan.spec.md        # ML Engineer (Phases 6-8)
+│       │   └── marie.spec.md       # Communicator (Phases 9-10)
+│       ├── workflows/              # 7 workflow specs
+│       │   ├── full-lifecycle/
+│       │   ├── quick-eda/
+│       │   ├── modeling-pipeline/
+│       │   ├── prototype-to-production/
+│       │   ├── data-quality-check/
+│       │   ├── hyperparameter-optimization/
+│       │   └── model-interpretation/
+│       └── docs/                   # User documentation
+│           ├── getting-started.md
+│           ├── agents.md
+│           ├── workflows.md
+│           └── examples.md
+│
+├── _bmad-output/                   # Build artifacts (versionado)
+│   └── bmb-creations/
+│       └── modules/
+│           ├── module-brief-rds.md
+│           ├── module-build-rds.md
+│           └── validation-report-rds-20260317.md
 │
 ├── .claude/
-│   └── skills/                     # R Data Science Skills (não versionados)
-│
-├── data/                           # Dados de projeto (não versionados)
-│   ├── raw/
-│   └── processed/
-│
-├── outputs/                        # Resultados (não versionados)
+│   └── skills/                     # 20+ R Data Science Skills (não versionados)
 │
 ├── CLAUDE.md                       # Instruções para Claude Code
-├── data-science-lifecycle-framework.md  # Especificação completa do ciclo
+├── rds-brief-prep.md               # Preparação do módulo
 └── README.md                       # Este arquivo
 ```
 
@@ -48,39 +72,115 @@ Criar um módulo BMAD através do BMB (BMAD Builder) que orquestre o workflow de
 2. **Claude Code** com skills de R Data Science
 3. **R** com tidyverse e tidymodels
 
-### Desenvolvimento do Módulo
+### Status do Módulo RDS
 
-O desenvolvimento seguirá o workflow BMB:
+O módulo foi criado através do workflow BMB completo:
 
-1. **Brief Mode**: Criar visão do módulo usando `/bmad:bmb:workflows:module` (modo B)
-2. **Create Mode**: Construir estrutura do módulo (modo C)
-3. **Edit Mode**: Refinar agentes e workflows (modo E)
-4. **Validate Mode**: Validar compliance (modo V)
+✅ **Brief Mode** — Especificação completa do módulo
+✅ **Create Mode** — Estrutura com 4 agents specs e 7 workflow specs
+✅ **Validate Mode** — Validação de compliance (PASS)
+
+### Próximos Passos
+
+Para completar a implementação do módulo:
+
+1. **Construir Agentes** usando `/bmad:bmb:agents:agent-builder`
+   - Ada (Project Architect)
+   - Grace (Data Scientist)
+   - Alan (ML Engineer)
+   - Marie (Communicator)
+
+2. **Construir Workflows** usando `/bmad:bmb:workflows:workflow`
+   - Começar com: `quick-eda` → `modeling-pipeline` → `full-lifecycle`
+   - Depois os especializados: `data-quality-check`, `hyperparameter-optimization`, `model-interpretation`, `prototype-to-production`
+
+3. **Testar Instalação**
+   ```bash
+   bmad install rds
+   ```
+
+4. **Usar o Módulo**
+   ```
+   /bmad:rds:agents:ada      # Project setup, import, cleaning
+   /bmad:rds:agents:grace    # EDA, feature engineering
+   /bmad:rds:agents:alan     # Modeling, tuning, evaluation
+   /bmad:rds:agents:marie    # Communication, deployment
+   ```
+
+### Documentação do Módulo
+
+Consulte a documentação completa em:
+- **[_bmad/rds/README.md](_bmad/rds/README.md)** — Visão geral do módulo
+- **[_bmad/rds/TODO.md](_bmad/rds/TODO.md)** — Roadmap de implementação
+- **[_bmad/rds/docs/](_bmad/rds/docs/)** — Guias de usuário:
+  - `getting-started.md` — Como começar
+  - `agents.md` — Referência dos agentes
+  - `workflows.md` — Referência dos workflows
+  - `examples.md` — Exemplos práticos e troubleshooting
 
 ## 📋 Status
 
 - ✅ Framework BMAD instalado (v6.0.0-alpha.23)
 - ✅ Skills R Data Science instalados (20+ skills)
-- ✅ Especificação completa documentada
-- ⏳ Módulo rds em desenvolvimento
+- ✅ Módulo RDS criado via BMB workflow
+- ✅ Estrutura completa com 4 agent specs
+- ✅ 7 workflow specs definidos
+- ✅ Documentação completa (1,253 linhas)
+- ✅ Validação: PASS (compliance verificado)
+- ⏳ Próximo: Implementar agentes e workflows
+
+**Última atualização:** 2026-03-17
 
 ## 🔧 Estratégia de Versionamento
 
 **Versionado**:
-- Documentação (CLAUDE.md, framework, README)
-- Customizações do módulo rds
-- Scripts e templates desenvolvidos
+- Documentação (CLAUDE.md, README, preparação)
+- **Módulo RDS completo** (`_bmad/rds/`)
+- **Build artifacts** (`_bmad-output/bmb-creations/`)
+- Agent e workflow specs
+- User documentation
 
 **Não Versionado** (via .gitignore):
 - Framework BMAD base (_bmad/core, _bmad/bmb)
 - Skills externos (.claude/skills/)
-- Dados sensíveis (data/)
-- Outputs gerados (_bmad-output/)
+- Dados de projetos (data/)
+- Outputs de runtime
 - Modelos treinados (models/)
 - Configurações locais
 
 ## 📚 Recursos
 
-- [CLAUDE.md](CLAUDE.md) - Guia para Claude Code
-- [data-science-lifecycle-framework.md](data-science-lifecycle-framework.md) - Framework de 10 fases
-- [BMAD Documentation](https://github.com/bmadcode/bmad-method) - Framework BMAD oficial
+### Documentação do Repositório
+- [CLAUDE.md](CLAUDE.md) — Guia para Claude Code
+- [rds-brief-prep.md](rds-brief-prep.md) — Preparação do módulo RDS
+
+### Documentação do Módulo RDS
+- [_bmad/rds/README.md](_bmad/rds/README.md) — Visão geral
+- [_bmad/rds/TODO.md](_bmad/rds/TODO.md) — Roadmap
+- [_bmad/rds/docs/](_bmad/rds/docs/) — Guias completos
+
+### Build Artifacts
+- [module-brief-rds.md](_bmad-output/bmb-creations/modules/module-brief-rds.md) — Brief completo (422 linhas)
+- [module-build-rds.md](_bmad-output/bmb-creations/modules/module-build-rds.md) — Build tracking
+- [validation-report-rds-20260317.md](_bmad-output/bmb-creations/modules/validation-report-rds-20260317.md) — Validation report
+
+### Recursos Externos
+- [BMAD Documentation](https://github.com/bmadcode/bmad-method) — Framework BMAD oficial
+- [Tidyverse](https://www.tidyverse.org/) — Data wrangling
+- [Tidymodels](https://www.tidymodels.org/) — Machine learning
+- [Quarto](https://quarto.org/) — Reports & dashboards
+- [Vetiver](https://vetiver.rstudio.com/) — Model deployment
+
+## 🎯 Arquitetura do Módulo
+
+**4 Agentes Especializados:**
+- **Ada** (🏗️) — Project Architect — Phases 1-3
+- **Grace** (🔬) — Data Scientist — Phases 4-5
+- **Alan** (🤖) — ML Engineer — Phases 6-8
+- **Marie** (📊) — Communicator — Phases 9-10
+
+**7 Workflows:**
+- **Core:** full-lifecycle, quick-eda, modeling-pipeline, prototype-to-production
+- **Specialized:** data-quality-check, hyperparameter-optimization, model-interpretation
+
+Ver documentação completa em [_bmad/rds/docs/](_bmad/rds/docs/)
