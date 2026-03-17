@@ -8,6 +8,7 @@ This is a **BMAD (BMad Method) Data Science** repository that provides a compreh
 
 - **BMAD Core Module**: Master orchestrator, foundational workflows (brainstorming, party-mode), and task system
 - **BMAD BMB Module**: Builder tools for creating agents, workflows, and complete modules
+- **BMAD RDS Module**: R Data Science 10-phase framework with 4 agents and 7 workflows (COMPLETE)
 - **20+ R Data Science Skills**: Comprehensive Claude Code skills for tidyverse, tidymodels, deep learning, Bayesian stats, Shiny, Quarto, and more
 
 **Language Configuration**: User name is "Giu", primary communication language is Portuguese, but documentation/output defaults to English. Check `_bmad/core/config.yaml` for current settings.
@@ -26,11 +27,22 @@ This is a **BMAD (BMad Method) Data Science** repository that provides a compreh
 │   │   ├── agents/                 # module-builder, agent-builder, workflow-builder
 │   │   ├── workflows/              # module, agent, workflow (quad-modal)
 │   │   └── config.yaml             # BMB configuration
+│   ├── rds/                        # ✅ RDS module (R Data Science) - COMPLETE
+│   │   ├── module.yaml             # Module metadata (distribution format)
+│   │   ├── package.json            # NPM package configuration
+│   │   ├── README.md               # Module documentation
+│   │   ├── agents/                 # 4 agents (ada, grace, alan, marie)
+│   │   ├── workflows/              # 7 workflows (full-lifecycle, quick-eda, etc.)
+│   │   ├── docs/                   # User documentation
+│   │   └── _module-installer/      # Installation scripts
 │   ├── _config/                    # Installation metadata
 │   │   ├── manifest.yaml           # Version 6.0.0-alpha.23, installed modules/IDEs
 │   │   ├── ides/                   # claude-code.yaml
 │   │   └── agents/*.customize.yaml # Agent customizations
 │   └── _bmad-output/               # Output directory for generated artifacts
+│
+├── docs/
+│   └── planning/                   # Planning and preparation documents
 │
 └── .claude/skills/                 # 20+ R data science skills
     ├── r-datascience/              # Tidyverse, data wrangling
@@ -138,7 +150,9 @@ Or from the bmad-master menu by number or fuzzy text match.
 **Modules**: Use `/bmad:bmb:workflows:module` workflow
 - Start with Brief mode to explore module vision
 - Create mode builds complete structure from brief
-- Includes agents/, workflows/, config.yaml, README.md
+- Includes agents/, workflows/, module.yaml, package.json, README.md
+- For distribution: Rename config.yaml to module.yaml, add package.json
+- Test locally: `npx bmad-method install` → custom module → provide path
 
 ### Agent Architecture Types
 
@@ -178,9 +192,10 @@ Skills are for **guidance only** - no actual R code is executed in this reposito
 ## Version Information
 
 - **BMAD Version**: 6.0.0-alpha.23
-- **Installed Modules**: core, bmb
+- **Installed Modules**: core, bmb, rds (development)
 - **IDE Integration**: claude-code
 - **Installation Date**: 2026-03-17
+- **RDS Module Status**: Complete (4 agents, 7 workflows, ready for distribution)
 
 ## Important Notes
 

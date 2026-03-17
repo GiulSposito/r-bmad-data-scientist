@@ -27,7 +27,8 @@ Módulo BMAD que orquestra o workflow de 10 fases de Data Science em R:
 │   ├── core/                       # Módulo core + bmad-master (não versionado)
 │   ├── bmb/                        # Builder para criar módulos (não versionado)
 │   └── rds/                        # ✅ Módulo RDS (versionado)
-│       ├── config.yaml             # Configuração do módulo
+│       ├── module.yaml             # Configuração do módulo (distribution format)
+│       ├── package.json            # NPM package metadata
 │       ├── README.md               # Documentação do módulo
 │       ├── TODO.md                 # Roadmap de implementação
 │       ├── agents/                 # 4 agent specs
@@ -59,8 +60,15 @@ Módulo BMAD que orquestra o workflow de 10 fases de Data Science em R:
 ├── .claude/
 │   └── skills/                     # 20+ R Data Science Skills (não versionados)
 │
+├── docs/
+│   └── planning/                   # Documentos de planejamento e preparação
+│       ├── MODULE_BRIEF_PREPARATION.md
+│       ├── rds-brief-prep.md
+│       ├── data-science-lifecycle-framework.md
+│       ├── REPOSITORY_STRATEGY.md
+│       └── SETUP_COMPLETE.md
+│
 ├── CLAUDE.md                       # Instruções para Claude Code
-├── rds-brief-prep.md               # Preparação do módulo
 └── README.md                       # Este arquivo
 ```
 
@@ -99,10 +107,22 @@ Status atual da implementação:
    - ✅ `hyperparameter-optimization` (4 steps, 83KB)
    - ✅ `model-interpretation` (4 steps)
 
-3. **Testar Instalação** ⏳ PRÓXIMO PASSO
+3. **Distribuição e Instalação** ✅ TESTADO
+
+   **Preparação para Distribuição:**
+   - ✅ `config.yaml` renomeado para `module.yaml` (padrão de distribuição)
+   - ✅ `package.json` criado com metadados NPM
+   - ✅ Estrutura validada para instalação local
+
+   **Teste de Instalação Local:**
    ```bash
-   bmad install rds
+   # Em um novo projeto
+   npx bmad-method install
+   # Selecionar: custom module
+   # Path: /caminho/para/_bmad/rds
    ```
+
+   Instalação testada com sucesso em `~/Projects/test-rds-install`
 
 4. **Usar o Módulo**
    ```
@@ -132,7 +152,8 @@ Consulte a documentação completa em:
 - ✅ **7 Workflows completos**: full-lifecycle (148KB), quick-eda, modeling-pipeline (112KB), prototype-to-production, data-quality-check, hyperparameter-optimization (83KB), model-interpretation
 - ✅ Documentação completa (1,253 linhas)
 - ✅ Validação: PASS (compliance verificado)
-- ⏳ Próximo: Testar instalação e funcionalidade
+- ✅ **Distribuição preparada**: module.yaml + package.json
+- ✅ **Instalação local testada**: Funcionando em projeto de teste
 
 **Última atualização:** 2026-03-17
 
@@ -157,7 +178,7 @@ Consulte a documentação completa em:
 
 ### Documentação do Repositório
 - [CLAUDE.md](CLAUDE.md) — Guia para Claude Code
-- [rds-brief-prep.md](rds-brief-prep.md) — Preparação do módulo RDS
+- [docs/planning/](docs/planning/) — Documentos de planejamento e preparação
 
 ### Documentação do Módulo RDS
 - [_bmad/rds/README.md](_bmad/rds/README.md) — Visão geral

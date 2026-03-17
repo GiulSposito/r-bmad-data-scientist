@@ -1,0 +1,28 @@
+{
+  "name": "bmad-rds",
+  "version": "0.1.0",
+  "description": "RDS: R Data Science - 10-Phase Framework for R Data Science Excellence",
+  "keywords": [
+    "bmad",
+    "r",
+    "data-science",
+    "tidyverse",
+    "tidymodels",
+    "machine-learning",
+    "data-analysis"
+  ],
+  "author": "Giu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/bmad-rds.git"
+  },
+  "bmad": {
+    "module_code": "rds",
+    "module_type": "standalone",
+    "requires_bmad_version": ">=6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
