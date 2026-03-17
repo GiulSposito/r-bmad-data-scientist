@@ -1,0 +1,282 @@
+# ============================================================================
+# .gitignore para r-bmad-data-scientist
+# Repositório para desenvolvimento de módulo BMAD Data Science Lifecycle
+# ============================================================================
+
+# ============================================================================
+# BMAD Framework (instalado externamente)
+# ============================================================================
+# Ignorar framework BMAD completo - vem de instalação externa
+_bmad/
+
+# EXCEÇÃO: Versionar apenas customizações próprias do projeto
+!_bmad/_config/custom/
+!_bmad/ds-lifecycle/
+
+# ============================================================================
+# Claude Code Skills (instalados externamente)
+# ============================================================================
+# Ignorar todos os skills R - vêm de repositórios externos
+.claude/skills/
+
+# EXCEÇÃO: Versionar skills customizados criados neste projeto
+!.claude/skills/ds-lifecycle*/
+
+# ============================================================================
+# BMAD Outputs (gerados em runtime)
+# ============================================================================
+# Diretório de outputs do BMAD
+_bmad-output/
+
+# BMB creations (artefatos gerados pelo builder)
+_bmad-output/bmb-creations/
+
+# Logs e temporários do BMAD
+_bmad/**/*.log
+_bmad/**/.tmp/
+_bmad/**/.cache/
+
+# ============================================================================
+# Configurações locais e customizações geradas
+# ============================================================================
+# Settings locais do Claude Code
+.claude/settings.local.json
+
+# Configurações pessoais do BMAD (contém user_name, etc)
+_bmad/core/config.yaml
+_bmad/bmb/config.yaml
+_bmad/_config/ides/claude-code.yaml
+
+# EXCEÇÃO: Templates de config para distribuição
+!_bmad/core/config.yaml.template
+!_bmad/bmb/config.yaml.template
+
+# Memory do Claude (informações de sessão)
+.claude/projects/*/memory/
+
+# ============================================================================
+# R Project Files
+# ============================================================================
+# R session data
+.RData
+.Rhistory
+.Rapp.history
+
+# R environment
+.Renviron
+.Rprofile
+
+# RStudio project files (manter .Rproj para compartilhar)
+.Rproj.user/
+*.Rproj.user
+
+# renv - dependency management
+# Estratégia: versionar lock file, ignorar library
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock.json.bak
+renv/python/
+renv/sandbox/
+renv/staging/
+# Versionar: renv.lock, renv/activate.R, renv/settings.dcf
+
+# packrat (alternativa ao renv)
+packrat/lib*/
+packrat/src/
+
+# ============================================================================
+# Data Files (sensíveis e grandes)
+# ============================================================================
+# Diretório de dados brutos
+data/raw/**
+data/processed/**
+
+# EXCEÇÃO: Amostras pequenas para exemplos
+!data/raw/sample_*.csv
+!data/raw/example_*.csv
+!data/processed/sample_*.csv
+
+# Arquivos de dados grandes
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.rds
+*.RDS
+*.rda
+*.RData
+*.feather
+*.parquet
+
+# EXCEÇÃO: Metadados e pequenos datasets de referência
+!data/**/metadata.csv
+!data/**/codebook.csv
+!data/**/README.md
+
+# ============================================================================
+# Model Artifacts (modelos treinados)
+# ============================================================================
+# Modelos salvos
+models/**/*.rds
+models/**/*.RDS
+models/**/*.h5
+models/**/*.pkl
+models/**/*.joblib
+
+# Vetiver pins
+models/pins/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# ============================================================================
+# Analysis Outputs (resultados e visualizações)
+# ============================================================================
+# Outputs de análise
+outputs/**/*.png
+outputs/**/*.jpg
+outputs/**/*.pdf
+outputs/**/*.html
+
+# EXCEÇÃO: Figuras finais para documentação
+!outputs/final_figures/*.png
+!outputs/final_figures/*.pdf
+
+# Quarto outputs
+_site/
+_book/
+*.html
+*.pdf
+*_files/
+*_cache/
+
+# EXCEÇÃO: README e documentação
+!README.md
+!CLAUDE.md
+!**/README.html
+!docs/**/*.html
+
+# ============================================================================
+# Temporary and Cache Files
+# ============================================================================
+# R temporary
+*.Rout
+*.aux
+*.log
+*.out
+*.toc
+
+# knitr/quarto cache
+*_cache/
+*_files/
+.quarto/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# ============================================================================
+# Credentials and Secrets
+# ============================================================================
+# Evitar commit de credenciais
+.env
+.env.local
+.env.*.local
+credentials.json
+secrets.yaml
+*_credentials.json
+*_secrets.yaml
+*.key
+*.pem
+*.cer
+*.crt
+*.p12
+
+# Database connections
+.Ruserdata
+dbconfig.yml
+
+# API keys
+.api_keys
+api_keys.txt
+
+# ============================================================================
+# Logs and Debugging
+# ============================================================================
+# Application logs
+logs/
+*.log
+log.txt
+
+# Debug outputs
+debug/
+.debug/
+
+# Profiling results
+*.prof
+Rprof.out
+
+# ============================================================================
+# Documentation Build Artifacts
+# ============================================================================
+# pkgdown
+docs/
+_pkgdown.yml
+
+# roxygen2
+man/*.Rd
+
+# vignettes
+vignettes/*.html
+vignettes/*.R
+inst/doc/
+
+# ============================================================================
+# Testing
+# ============================================================================
+# Test outputs
+tests/testthat/_snaps/
+tests/testthat/Rplots.pdf
+
+# Coverage reports
+coverage/
+htmlcov/
+
+# ============================================================================
+# CI/CD
+# ============================================================================
+# GitHub Actions artifacts (manter workflows)
+.github/workflows/artifacts/
+
+# ============================================================================
+# Notes and Planning (pessoal)
+# ============================================================================
+# Notas pessoais
+NOTES.md
+TODO.md
+PLANNING.md
+scratch/
+sandbox/
+
+# EXCEÇÃO: Documentação oficial do projeto
+!PROJECT_NOTES.md
+!ROADMAP.md
+
+# ============================================================================
+# END OF .gitignore
+# ============================================================================
