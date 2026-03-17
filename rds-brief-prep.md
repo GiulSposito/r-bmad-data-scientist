@@ -1,4 +1,4 @@
-# Data Science Lifecycle Module - Brief Preparation
+# R Data Science Module - Brief Preparation
 
 **Preparação para**: `/bmad:bmb:workflows:module` (Brief Mode)
 **Data**: 2026-03-17
@@ -47,9 +47,9 @@ Sistematizar décadas de melhores práticas (Tidyverse, Tidymodels, feature engi
 - Não estende módulo existente
 - Não é global (não afeta todo BMAD)
 
-**Module Code**: `ds-lifecycle`
+**Module Code**: `rds`
 
-**Location**: `_bmad/ds-lifecycle/`
+**Location**: `_bmad/rds/`
 
 ---
 
@@ -81,8 +81,8 @@ Sistematizar décadas de melhores práticas (Tidyverse, Tidymodels, feature engi
 
 ### Module Identity
 
-**Name**: Data Science Lifecycle
-**Code**: `ds-lifecycle`
+**Name**: R Data Science
+**Code**: `rds`
 **Header**: "10-Phase Framework for R Data Science Excellence"
 **Subheader**: "From raw data to production deployment, guided by best practices"
 
@@ -152,7 +152,7 @@ Sistematizar décadas de melhores práticas (Tidyverse, Tidymodels, feature engi
 **1. Decisões, Não Apenas Execução**
 ```
 ❌ Outros frameworks: "Faça feature engineering"
-✅ ds-lifecycle: "Sua variável tem 50+ categorias? Use entity embeddings.
+✅ rds: "Sua variável tem 50+ categorias? Use entity embeddings.
                  Tem 10-50? Use target encoding.
                  Tem <10? Use dummy variables."
 ```
@@ -182,7 +182,7 @@ Sistematizar décadas de melhores práticas (Tidyverse, Tidymodels, feature engi
 
 ### Comparação
 
-| Feature | Manual Workflow | ds-lifecycle |
+| Feature | Manual Workflow | rds |
 |---------|----------------|--------------|
 | Setup tempo | 2-4 horas | 15 minutos |
 | Decisões guiadas | Não | Sim (tabelas, decision trees) |
@@ -901,7 +901,7 @@ best practices every step of the way.
 ### Templates Directory Structure
 
 ```
-_bmad/ds-lifecycle/templates/
+_bmad/rds/templates/
 ├── project-structure/
 │   ├── .gitignore
 │   ├── .Rprofile
@@ -935,7 +935,7 @@ _bmad/ds-lifecycle/templates/
 ### Data Directory Structure
 
 ```
-_bmad/ds-lifecycle/data/
+_bmad/rds/data/
 ├── decision-trees/
 │   ├── encoding-strategy.md
 │   ├── transformation-guide.md
@@ -976,7 +976,7 @@ _bmad/ds-lifecycle/data/
 ### Module Summary
 
 **Name**: Data Science Lifecycle
-**Code**: `ds-lifecycle`
+**Code**: `rds`
 **Type**: Standalone Module
 
 **Agents**: 4
@@ -1023,7 +1023,7 @@ _bmad/ds-lifecycle/data/
 
 **Step 5 - Identity**:
 > Name: "Data Science Lifecycle"
-> Code: "ds-lifecycle"
+> Code: "rds"
 > Header: "10-Phase Framework for R Data Science Excellence"
 
 **Step 6 - Users**:

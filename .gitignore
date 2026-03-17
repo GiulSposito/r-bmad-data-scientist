@@ -11,7 +11,7 @@ _bmad/
 
 # EXCEÇÃO: Versionar apenas customizações próprias do projeto
 !_bmad/_config/custom/
-!_bmad/ds-lifecycle/
+!_bmad/rds/
 
 # ============================================================================
 # Claude Code Skills (instalados externamente)
@@ -20,7 +20,7 @@ _bmad/
 .claude/skills/
 
 # EXCEÇÃO: Versionar skills customizados criados neste projeto
-!.claude/skills/ds-lifecycle*/
+!.claude/skills/rds*/
 
 # ============================================================================
 # BMAD Outputs (gerados em runtime)

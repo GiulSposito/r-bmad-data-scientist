@@ -24,7 +24,7 @@ Criar um módulo BMAD através do BMB (BMAD Builder) que orquestre o workflow de
 ├── _bmad/                          # Framework BMAD (não versionado)
 │   ├── core/                       # Módulo core + bmad-master
 │   ├── bmb/                        # Builder para criar módulos
-│   └── ds-lifecycle/               # FUTURO: Módulo a desenvolver
+│   └── rds/               # FUTURO: Módulo a desenvolver
 │
 ├── .claude/
 │   └── skills/                     # R Data Science Skills (não versionados)
@@ -62,13 +62,13 @@ O desenvolvimento seguirá o workflow BMB:
 - ✅ Framework BMAD instalado (v6.0.0-alpha.23)
 - ✅ Skills R Data Science instalados (20+ skills)
 - ✅ Especificação completa documentada
-- ⏳ Módulo ds-lifecycle em desenvolvimento
+- ⏳ Módulo rds em desenvolvimento
 
 ## 🔧 Estratégia de Versionamento
 
 **Versionado**:
 - Documentação (CLAUDE.md, framework, README)
-- Customizações do módulo ds-lifecycle
+- Customizações do módulo rds
 - Scripts e templates desenvolvidos
 
 **Não Versionado** (via .gitignore):

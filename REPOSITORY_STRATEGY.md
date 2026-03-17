@@ -31,8 +31,8 @@ Este repositório serve como **workspace de desenvolvimento** para criar um mód
 - `data-science-lifecycle-framework.md`: Especificação completa das 10 fases
 - `REPOSITORY_STRATEGY.md`: Este arquivo
 
-#### 2. Módulo ds-lifecycle (FUTURO)
-- `_bmad/ds-lifecycle/`: Módulo a ser criado via BMB
+#### 2. Módulo rds (FUTURO)
+- `_bmad/rds/`: Módulo a ser criado via BMB
   - `agents/`: Agentes especializados por fase
   - `workflows/`: Workflows orquestrando as 10 fases
   - `config.yaml`: Configuração do módulo
@@ -82,9 +82,9 @@ Este repositório serve como **workspace de desenvolvimento** para criar um mód
    ```
    /bmad:bmb:workflows:module
    → Selecionar "Brief"
-   → Explorar visão do módulo ds-lifecycle
+   → Explorar visão do módulo rds
    → Definir agentes, workflows, e funcionalidades
-   → Salvar brief em _bmad-output/bmb-creations/ds-lifecycle-brief.md
+   → Salvar brief em _bmad-output/bmb-creations/rds-brief.md
    ```
 
 2. **Create Mode** (C)
@@ -92,10 +92,10 @@ Este repositório serve como **workspace de desenvolvimento** para criar um mód
    → Selecionar "Create"
    → Carregar brief
    → BMB gera estrutura completa:
-     - _bmad/ds-lifecycle/config.yaml
-     - _bmad/ds-lifecycle/agents/*.md
-     - _bmad/ds-lifecycle/workflows/*/workflow.md
-     - _bmad/ds-lifecycle/README.md
+     - _bmad/rds/config.yaml
+     - _bmad/rds/agents/*.md
+     - _bmad/rds/workflows/*/workflow.md
+     - _bmad/rds/README.md
    ```
 
 3. **Edit Mode** (E)
@@ -112,10 +112,10 @@ Este repositório serve como **workspace de desenvolvimento** para criar um mód
    → Testar workflows
    ```
 
-### Estrutura do Módulo ds-lifecycle (Planejado)
+### Estrutura do Módulo rds (Planejado)
 
 ```
-_bmad/ds-lifecycle/
+_bmad/rds/
 ├── config.yaml                     # Configuração do módulo
 ├── README.md                       # Documentação do módulo
 │
@@ -163,7 +163,7 @@ _bmad/ds-lifecycle/
 bmad update
 
 # Isso atualiza _bmad/core e _bmad/bmb
-# Não afeta customizações em _bmad/ds-lifecycle
+# Não afeta customizações em _bmad/rds
 ```
 
 ### R Skills
@@ -172,10 +172,10 @@ bmad update
 # Configuração em .claude/settings.json
 ```
 
-### Módulo ds-lifecycle
+### Módulo rds
 ```bash
 # Versionado via git normalmente
-git add _bmad/ds-lifecycle
+git add _bmad/rds
 git commit -m "feat: implementa agente de EDA"
 git push origin main
 ```
@@ -190,7 +190,7 @@ Quando o módulo estiver completo, ele pode ser:
 
 ```bash
 # Usuário instalaria com:
-bmad install ds-lifecycle
+bmad install rds
 ```
 
 ## 🔒 Segurança e Privacidade
@@ -243,7 +243,7 @@ bmad install ds-lifecycle
    - Código, documentação = versionados
 
 3. **Modularidade**
-   - Módulo ds-lifecycle é independente
+   - Módulo rds é independente
    - Pode ser extraído e distribuído separadamente
    - Segue padrões BMAD Core
 
@@ -274,4 +274,4 @@ bmad install ds-lifecycle
 
 **Última Atualização**: 2026-03-16
 **Status**: Setup completo, pronto para desenvolvimento
-**Próximo Marco**: Criar brief do módulo ds-lifecycle via BMB
+**Próximo Marco**: Criar brief do módulo rds via BMB

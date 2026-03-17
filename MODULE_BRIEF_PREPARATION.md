@@ -1,4 +1,4 @@
-# Preparação para Criação do Módulo ds-lifecycle via BMB
+# Preparação para Criação do Módulo rds via BMB
 
 **Data**: 2026-03-17
 **Objetivo**: Analisar o documento `data-science-lifecycle-framework.md` e preparar informações para o workflow BMB Module Brief
@@ -39,7 +39,7 @@ Baseado na análise dos steps do BMB, o workflow vai perguntar sobre:
 
 ### 1. **Module Type** (Step 3)
 - Standalone, Extension, ou Global?
-- **Para ds-lifecycle**: Standalone (novo domínio independente)
+- **Para rds**: Standalone (novo domínio independente)
 
 ### 2. **Vision** (Step 4)
 - O que faz esse módulo extraordinário?
@@ -144,7 +144,7 @@ Baseado na análise dos steps do BMB, o workflow vai perguntar sobre:
 
 #### Opção C: 1 Agente Master + Workflows
 ```
-1. ds-lifecycle-master
+1. rds-master
    - Menu com comandos para cada fase
    - Orquestra workflows
    → "Eu guio você pelo ciclo completo"
@@ -300,7 +300,7 @@ Tempo: 4-6 horas.
 **Sugestão de Estrutura**:
 
 ```
-_bmad/ds-lifecycle/
+_bmad/rds/
 ├── templates/
 │   ├── project-structure/          # Template de diretórios
 │   │   ├── .gitignore
@@ -351,7 +351,7 @@ _bmad/ds-lifecycle/
 
 **Lore/Backstory**:
 ```
-"O módulo ds-lifecycle nasceu da frustração de cientistas de dados
+"O módulo rds nasceu da frustração de cientistas de dados
 que refaziam os mesmos passos em cada projeto. Um grupo de 4 experts
 decidiu sistematizar as melhores práticas do ecossistema R moderno
 (Tidyverse + Tidymodels) em um framework executável."
@@ -375,16 +375,16 @@ decidiu sistematizar as melhores práticas do ecossistema R moderno
 
 Antes de rodar o BMB, sugiro criar um documento complementar:
 
-### `ds-lifecycle-brief-prep.md`
+### `rds-brief-prep.md`
 
 ```markdown
-# ds-lifecycle Module - Brief Preparation
+# rds Module - Brief Preparation
 
 ## Quick Reference for BMB Workflow
 
 ### Module Identity
 - **Name**: Data Science Lifecycle
-- **Code**: ds-lifecycle
+- **Code**: rds
 - **Type**: Standalone Module
 - **Tagline**: "10-Phase Framework for R Data Science Excellence"
 
@@ -507,7 +507,7 @@ Antes de invocar `/bmad:bmb:workflows:module`:
 
 1. **ANTES do BMB**:
    - Decidir arquitetura de agentes (sugestão: Opção B - 4 agentes)
-   - Criar `ds-lifecycle-brief-prep.md` com decisões
+   - Criar `rds-brief-prep.md` com decisões
    - Ler este documento para ter respostas prontas
 
 2. **DURANTE o BMB**:
@@ -532,7 +532,7 @@ Antes de invocar `/bmad:bmb:workflows:module`:
 
 **O Que Falta**: Arquitetura de agentes, estrutura de workflows, scenarios narrativos, templates
 
-**Ação Recomendada**: Criar `ds-lifecycle-brief-prep.md` com decisões estratégicas antes de rodar BMB
+**Ação Recomendada**: Criar `rds-brief-prep.md` com decisões estratégicas antes de rodar BMB
 
 **Tempo Estimado**:
 - Prep (este doc + decisões): 1-2h
@@ -543,4 +543,4 @@ Antes de invocar `/bmad:bmb:workflows:module`:
 ---
 
 **Criado**: 2026-03-17
-**Próximo Passo**: Revisar sugestões e criar `ds-lifecycle-brief-prep.md`
+**Próximo Passo**: Revisar sugestões e criar `rds-brief-prep.md`

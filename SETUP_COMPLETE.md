@@ -15,7 +15,7 @@ O repositório está configurado e pronto para desenvolvimento do módulo BMAD D
    - Ignora R skills externos (`.claude/skills/`)
    - Ignora outputs gerados (`_bmad-output/`, `data/`, `models/`, `outputs/`)
    - Ignora configs locais com informações pessoais
-   - Exceções para customizações do módulo ds-lifecycle
+   - Exceções para customizações do módulo rds
    - Proteção contra commit de credenciais e secrets
 
 2. **`.gitattributes`** (~80 linhas)
@@ -52,7 +52,7 @@ O repositório está configurado e pronto para desenvolvimento do módulo BMAD D
    - Arquitetura detalhada
    - O que versionar vs não versionar (e por quê)
    - Workflow de desenvolvimento
-   - Estrutura planejada do módulo ds-lifecycle
+   - Estrutura planejada do módulo rds
    - Ciclo de atualização
    - Segurança e privacidade
    - Princípios de design
@@ -98,7 +98,7 @@ git commit -m "docs: configuração inicial do repositório
 
 Framework BMAD v6.0.0-alpha.23 instalado
 20+ R Data Science skills instalados
-Pronto para desenvolvimento do módulo ds-lifecycle"
+Pronto para desenvolvimento do módulo rds"
 
 # Push para GitHub
 git push origin main
@@ -111,8 +111,8 @@ git push origin main
 /bmad:bmb:workflows:module
 
 # Selecionar modo "Brief" (B)
-# Explorar visão do módulo ds-lifecycle:
-# - Nome: ds-lifecycle
+# Explorar visão do módulo rds:
+# - Nome: rds
 # - Tipo: Module
 # - Visão: Orquestrar 10 fases do ciclo de vida DS em R
 # - Usuários: Data Scientists usando R
@@ -125,7 +125,7 @@ git push origin main
 
 ```bash
 # BMB Create Mode (C)
-# Gera estrutura completa em _bmad/ds-lifecycle/
+# Gera estrutura completa em _bmad/rds/
 ```
 
 ### 4. Versionar Módulo
@@ -133,8 +133,8 @@ git push origin main
 ```bash
 # Adicionar exceção ao .gitignore já está configurada
 # Versionar normalmente
-git add _bmad/ds-lifecycle
-git commit -m "feat: adiciona módulo ds-lifecycle inicial"
+git add _bmad/rds
+git commit -m "feat: adiciona módulo rds inicial"
 ```
 
 ## ✅ Checklist de Verificação
@@ -149,8 +149,8 @@ git commit -m "feat: adiciona módulo ds-lifecycle inicial"
 - [x] REPOSITORY_STRATEGY.md criado (arquitetura)
 - [ ] Commit inicial realizado
 - [ ] Push para GitHub
-- [ ] Brief do módulo ds-lifecycle criado
-- [ ] Módulo ds-lifecycle implementado
+- [ ] Brief do módulo rds criado
+- [ ] Módulo rds implementado
 
 ## 📋 Estrutura de Commit Recomendada
 
@@ -166,7 +166,7 @@ git commit -m "feat: adiciona módulo ds-lifecycle inicial"
 ### Escopos
 
 - `setup` - Configuração inicial
-- `module` - Módulo ds-lifecycle
+- `module` - Módulo rds
 - `agent` - Agentes específicos
 - `workflow` - Workflows
 - `template` - Templates
@@ -176,7 +176,7 @@ git commit -m "feat: adiciona módulo ds-lifecycle inicial"
 
 ```bash
 git commit -m "docs(setup): adiciona framework specification"
-git commit -m "feat(module): implementa estrutura inicial ds-lifecycle"
+git commit -m "feat(module): implementa estrutura inicial rds"
 git commit -m "feat(agent): adiciona agente de EDA"
 git commit -m "feat(workflow): implementa full-lifecycle workflow"
 ```
@@ -202,7 +202,7 @@ git commit -m "feat(workflow): implementa full-lifecycle workflow"
 ### O Que Será Versionado?
 
 1. **Documentação**: CLAUDE.md, framework spec, README
-2. **Módulo ds-lifecycle**: Nosso desenvolvimento principal
+2. **Módulo rds**: Nosso desenvolvimento principal
 3. **Customizações**: Scripts, templates, configurações
 4. **Tests**: Validação do módulo
 
