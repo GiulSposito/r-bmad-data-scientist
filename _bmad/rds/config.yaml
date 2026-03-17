@@ -4,6 +4,7 @@
 # Date: 2026-03-17
 
 code: rds
+type: standalone
 name: "RDS: R Data Science"
 header: "10-Phase Framework for R Data Science Excellence"
 subheader: "From raw data to production deployment, guided by best practices"

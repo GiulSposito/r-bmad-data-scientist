@@ -6,53 +6,66 @@ Development roadmap for rds module.
 
 ## Agents to Build
 
-- [ ] Ada (Project Architect — Phases 1-3)
-  - Use: `bmad:bmb:agents:agent-builder` or `/agent`
-  - Spec: `agents/ada.spec.md`
+- [x] Ada (Project Architect — Phases 1-3) ✅ COMPLETE
+  - Built with `agent-builder` on 2026-03-17
+  - Location: `agents/ada.md`
 
-- [ ] Grace (Data Scientist — Phases 4-5)
-  - Use: `bmad:bmb:agents:agent-builder` or `/agent`
-  - Spec: `agents/grace.spec.md`
+- [x] Grace (Data Scientist — Phases 4-5) ✅ COMPLETE
+  - Built with `agent-builder` on 2026-03-17
+  - Location: `agents/grace.md`
 
-- [ ] Alan (ML Engineer — Phases 6-8)
-  - Use: `bmad:bmb:agents:agent-builder` or `/agent`
-  - Spec: `agents/alan.spec.md`
+- [x] Alan (ML Engineer — Phases 6-8) ✅ COMPLETE
+  - Built with `agent-builder` on 2026-03-17
+  - Location: `agents/alan.md`
 
-- [ ] Marie (Communicator — Phases 9-10)
-  - Use: `bmad:bmb:agents:agent-builder` or `/agent`
-  - Spec: `agents/marie.spec.md`
+- [x] Marie (Communicator — Phases 9-10) ✅ COMPLETE
+  - Built with `agent-builder` on 2026-03-17
+  - Location: `agents/marie.md`
 
 ---
 
 ## Workflows to Build
 
-- [ ] full-lifecycle
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/full-lifecycle/full-lifecycle.spec.md`
+- [x] full-lifecycle ✅ COMPLETE (10 steps, 148KB)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/full-lifecycle/`
 
-- [ ] quick-eda
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/quick-eda/quick-eda.spec.md`
+- [x] quick-eda ✅ COMPLETE (4 steps)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/quick-eda/`
 
-- [ ] modeling-pipeline
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/modeling-pipeline/modeling-pipeline.spec.md`
+- [x] modeling-pipeline ✅ COMPLETE (4 steps, 112KB)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/modeling-pipeline/`
 
-- [ ] prototype-to-production
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/prototype-to-production/prototype-to-production.spec.md`
+- [x] prototype-to-production ✅ COMPLETE (5 steps)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/prototype-to-production/`
 
-- [ ] data-quality-check
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/data-quality-check/data-quality-check.spec.md`
+- [x] data-quality-check ✅ COMPLETE (4 steps)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/data-quality-check/`
 
-- [ ] hyperparameter-optimization
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/hyperparameter-optimization/hyperparameter-optimization.spec.md`
+- [x] hyperparameter-optimization ✅ COMPLETE (4 steps, 83KB)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/hyperparameter-optimization/`
 
-- [ ] model-interpretation
-  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/model-interpretation/model-interpretation.spec.md`
+- [x] model-interpretation ✅ COMPLETE (4 steps)
+  - Built with parallel subagents on 2026-03-17
+  - Location: `workflows/model-interpretation/`
+
+### Future Workflows (Phase 2)
+
+- [ ] setup-project (Ada - individual workflow)
+- [ ] import-inspect (Ada - individual workflow)
+- [ ] clean-data (Ada - individual workflow)
+- [ ] exploratory-analysis (Grace - individual workflow)
+- [ ] feature-engineering (Grace - individual workflow)
+- [ ] build-model (Alan - individual workflow)
+- [ ] tune-model (Alan - individual workflow)
+- [ ] evaluate-model (Alan - individual workflow)
+
+Note: These Phase 2 workflows can be extracted from existing full-lifecycle and modeling-pipeline steps if needed.
 
 ---
 
