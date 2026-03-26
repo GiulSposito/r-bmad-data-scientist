@@ -82,7 +82,7 @@ Where would you like to start?
 Tip: Use [TM] for standard tuning (10-50 iter), [HO] when you need maximum performance (50-200 iter).
 
 Tell me the number or describe your modeling challenge!">[GS] Get Started - Find your entry point</item>
-    <item cmd="BM or fuzzy match on build-model" exec="{project-root}/_bmad/rds/workflows/modeling-pipeline/steps/step-02-baseline.md">[BM] Build Model - Baseline + systematic model comparison (from Modeling Pipeline)</item>
+    <item cmd="BM or fuzzy match on build-model" exec="{project-root}/_bmad/rds/workflows/modeling-pipeline/steps/step-02-baseline-models.md">[BM] Build Model - Baseline + systematic model comparison (from Modeling Pipeline)</item>
     <item cmd="TM or fuzzy match on tune-model" exec="{project-root}/_bmad/rds/workflows/modeling-pipeline/steps/step-03-tuning.md">[TM] Tune Model - Standard hyperparameter tuning (10-50 iter) (from Modeling Pipeline)</item>
     <item cmd="EM or fuzzy match on evaluate-model" exec="{project-root}/_bmad/rds/workflows/modeling-pipeline/steps/step-04-evaluation.md">[EM] Evaluate Model - Test set evaluation (ONCE, final) (from Modeling Pipeline)</item>
     <item cmd="MP or fuzzy match on modeling-pipeline" exec="{project-root}/_bmad/rds/workflows/modeling-pipeline/workflow.md">[MP] Modeling Pipeline - Phases 5-8 (coordinates FE with Grace, builds/tunes/evaluates)</item>

@@ -1,6 +1,6 @@
 {
   "name": "bmad-rds",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "RDS: R Data Science - 10-Phase Framework for R Data Science Excellence",
   "keywords": [
     "bmad",
@@ -20,7 +20,7 @@
   "bmad": {
     "module_code": "rds",
     "module_type": "standalone",
-    "requires_bmad_version": ">=6.0.0"
+    "requires_bmad_version": ">=6.2.2"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -114,7 +114,7 @@ Tell me the number or describe your situation!"
 
   <item n="3"
         trigger="II or fuzzy match on import-inspect"
-        exec="{project-root}/_bmad/rds/workflows/full-lifecycle/steps/step-02-import.md"
+        exec="{project-root}/_bmad/rds/workflows/full-lifecycle/steps/step-02-import-inspect.md"
         description="[II] Import & Inspect - Load data with quality checks (from Full Lifecycle)" />
 
   <item n="4"

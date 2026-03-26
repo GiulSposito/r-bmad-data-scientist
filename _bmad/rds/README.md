@@ -35,8 +35,11 @@ After installation, invoke the module's agents to get started:
 3. **Alan** (ML Engineer) — Modeling, Tuning, Evaluation — Phases 6-8
    - `/bmad:rds:agents:alan` or trigger from bmad-master menu
 
-4. **Marie** (Communicator) — Communication, Deployment — Phases 9-10
+4. **Marie** (The Reporter) — Reports, Dashboards, Presentations — Phase 9
    - `/bmad:rds:agents:marie` or trigger from bmad-master menu
+
+5. **Tim** (The Deployer) — Production Deployment, Monitoring — Phase 10
+   - `/bmad:rds:agents:tim` or trigger from bmad-master menu
 
 **For detailed documentation, see [docs/](docs/).**
 
@@ -61,40 +64,45 @@ After installation, invoke the module's agents to get started:
    - Phases: 6-8 (Modeling, Tuning, Evaluation)
    - Menu: [BM], [TM], [EM], [MP], [HO], [MI], [MS], [WS], [DA]
 
-4. **Marie** (Communicator) — "Science without communication is incomplete"
+4. **Marie** (The Reporter) — "Science without communication is incomplete"
    - Icon: 📊
-   - Phases: 9-10 (Communication, Deployment)
-   - Menu: [CR], [BD], [PR], [DM], [PP], [WS], [DA]
+   - Phase: 9 (Communication & Reporting)
+   - Menu: [TR], [ER], [BD], [PG], [DS], [WS], [PM], [DA]
+
+5. **Tim** (The Deployer) — "A model in production worth 10 in notebooks"
+   - Icon: 🚀
+   - Phase: 10 (Deployment & Monitoring)
+   - Menu: [DM], [MM], [PP], [PG], [VC], [DH], [WS], [PM], [DA]
 
 ### Workflows
 
+**Complete Lifecycle:**
 1. **full-lifecycle** — Complete 10-phase DS lifecycle (2-4 weeks)
-   - Orchestrated by Ada
-   - From raw data to deployed model
+   - Orchestrated by Ada → Grace → Alan → Marie → Tim
 
-2. **quick-eda** — Streamlined exploration (4-8 hours)
-   - Owned by Grace
-   - Fast insights for urgent questions
+**Phase-Specific Workflows:**
 
-3. **modeling-pipeline** — Feature engineering → evaluation (1-2 weeks)
-   - Owned by Alan
-   - Assumes clean data, focuses on modeling
+**Ada (Phases 1-3):**
+2. **data-quality-check** — Deep data quality analysis (4-8 hours)
 
-4. **prototype-to-production** — Modeling → deployment (1-2 weeks)
-   - Owned by Marie (with Alan handoff)
-   - Takes features to production
+**Grace (Phases 4-5):**
+3. **quick-eda** — Streamlined exploration (4-8 hours)
 
-5. **data-quality-check** — Deep data quality analysis (4-8 hours)
-   - Owned by Ada
-   - Systematic validation and remediation
+**Alan (Phases 6-8):**
+4. **modeling-pipeline** — Feature engineering → evaluation (1-2 weeks)
+5. **hyperparameter-optimization** — Advanced tuning (1-3 days)
+6. **model-interpretation** — Deep interpretability (1-2 days)
 
-6. **hyperparameter-optimization** — Advanced tuning (1-3 days)
-   - Owned by Alan
-   - Bayesian/racing methods for critical performance
+**Marie (Phase 9 - Communication):**
+7. **technical-report** — Comprehensive Quarto report (1-2 days)
+8. **executive-report** — Executive summary (4-6 hours)
+9. **build-dashboard** — Interactive Shiny dashboard (1-3 days)
+10. **presentation-generation** — Quarto reveal.js slides (4-8 hours)
 
-7. **model-interpretation** — Deep interpretability (1-2 days)
-   - Owned by Alan
-   - SHAP, VIP, PDPs for regulated industries
+**Tim (Phase 10 - Deployment):**
+11. **prototype-to-production** — Complete deployment workflow (1-2 weeks)
+12. **deploy-model** — Vetiver API deployment (1-2 days)
+13. **model-monitoring** — Monitoring and alerting setup (1-2 days)
 
 ---
 
@@ -150,12 +158,14 @@ For detailed user guides and documentation, see the **[docs/](docs/)** folder:
 
 ## Development Status
 
-This module is currently in development. The following components are planned:
+This module is **COMPLETE** and ready for use:
 
-- [ ] Agents: 4 agents (Ada, Grace, Alan, Marie)
-- [ ] Workflows: 7 workflows
+- [x] **Agents:** 5 agents (Ada, Grace, Alan, Marie, Tim)
+- [x] **Workflows:** 13 workflows covering complete DS lifecycle
+- [x] **Documentation:** Comprehensive agent specs and workflow guides
+- [x] **BMAD Version:** Compatible with 6.2.2+
 
-See TODO.md for detailed status.
+See CHANGELOG.md for version history.
 
 ---
 

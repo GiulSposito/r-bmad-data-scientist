@@ -17,7 +17,7 @@ BMAD module that orchestrates the 10-phase Data Science workflow in R:
 9. Communication
 10. Deployment & Monitoring
 
-**Complete framework with 4 agents and 7 workflows implemented (total of 343KB in workflows).**
+**Complete framework with 5 agents and 13 workflows implemented.**
 
 ## 📦 Structure
 
@@ -31,19 +31,26 @@ BMAD module that orchestrates the 10-phase Data Science workflow in R:
 │       ├── package.json            # NPM package metadata
 │       ├── README.md               # Module documentation
 │       ├── TODO.md                 # Implementation roadmap
-│       ├── agents/                 # 4 agent specs
+│       ├── agents/                 # 5 agent specs
 │       │   ├── ada.spec.md         # Project Architect (Phases 1-3)
 │       │   ├── grace.spec.md       # Data Scientist (Phases 4-5)
 │       │   ├── alan.spec.md        # ML Engineer (Phases 6-8)
-│       │   └── marie.spec.md       # Communicator (Phases 9-10)
-│       ├── workflows/              # 7 workflow specs
+│       │   ├── marie.spec.md       # The Reporter (Phase 9)
+│       │   └── tim.spec.md         # The Deployer (Phase 10)
+│       ├── workflows/              # 13 workflow specs
 │       │   ├── full-lifecycle/
 │       │   ├── quick-eda/
 │       │   ├── modeling-pipeline/
 │       │   ├── prototype-to-production/
 │       │   ├── data-quality-check/
 │       │   ├── hyperparameter-optimization/
-│       │   └── model-interpretation/
+│       │   ├── model-interpretation/
+│       │   ├── technical-report/
+│       │   ├── executive-report/
+│       │   ├── build-dashboard/
+│       │   ├── presentation-generation/
+│       │   ├── deploy-model/
+│       │   └── model-monitoring/
 │       └── docs/                   # User documentation
 │           ├── getting-started.md
 │           ├── agents.md
@@ -77,7 +84,7 @@ BMAD module that orchestrates the 10-phase Data Science workflow in R:
 ### Prerequisites
 
 1. **Claude Code** installed and running
-2. **BMAD Framework** installed (v6.0.0-alpha.23 or higher)
+2. **BMAD Framework** installed (v6.2.2 or higher)
 3. **R** environment with tidyverse and tidymodels
 4. **Git** for cloning repositories
 
@@ -155,11 +162,12 @@ Open Claude Code in your project directory and run:
 /bmad:core:agents:bmad-master
 ```
 
-You should see the RDS module listed with 4 agents available:
+You should see the RDS module listed with 5 agents available:
 - Ada (Project Architect)
 - Grace (Data Scientist)
 - Alan (ML Engineer)
-- Marie (Communicator)
+- Marie (The Reporter)
+- Tim (The Deployer)
 
 ### Quick Start
 
@@ -169,7 +177,8 @@ After installation, invoke agents directly:
 /bmad:rds:agents:ada      # Start a new data science project
 /bmad:rds:agents:grace    # Perform EDA and feature engineering
 /bmad:rds:agents:alan     # Build and tune models
-/bmad:rds:agents:marie    # Create reports and deploy models
+/bmad:rds:agents:marie    # Create reports and presentations
+/bmad:rds:agents:tim      # Deploy models to production
 ```
 
 Or use complete workflows:
@@ -191,7 +200,7 @@ Or use complete workflows:
 
 **Module not found after installation:**
 - Verify `_bmad/rds/module.yaml` exists
-- Check BMAD framework version (needs v6.0.0-alpha.23+)
+- Check BMAD framework version (needs v6.2.2+)
 - Run `/bmad:core:agents:bmad-master` to refresh module list
 
 **Agent commands not working:**
@@ -212,19 +221,26 @@ The module was created through the complete BMB workflow:
 ### Current Status
 
 1. **Agents** ✅ COMPLETE
-   - ✅ **Ada (Project Architect)** - Phases 1-3
-   - ✅ **Grace (Data Scientist)** - Phases 4-5
-   - ✅ **Alan (ML Engineer)** - Phases 6-8
-   - ✅ **Marie (Communicator)** - Phases 9-10
+   - ✅ **Ada (Project Architect)** - Phases 1-3: Setup, Import, Cleaning
+   - ✅ **Grace (Data Scientist)** - Phases 4-5: EDA, Feature Engineering
+   - ✅ **Alan (ML Engineer)** - Phases 6-8: Modeling, Tuning, Evaluation
+   - ✅ **Marie (The Reporter)** - Phase 9: Reports, Dashboards, Presentations
+   - ✅ **Tim (The Deployer)** - Phase 10: Deployment, Monitoring, Production
 
 2. **Workflows** ✅ COMPLETE
-   - ✅ `full-lifecycle` (10 steps, 148KB)
-   - ✅ `quick-eda` (4 steps)
-   - ✅ `modeling-pipeline` (4 steps, 112KB)
-   - ✅ `prototype-to-production` (5 steps)
-   - ✅ `data-quality-check` (4 steps)
-   - ✅ `hyperparameter-optimization` (4 steps, 83KB)
-   - ✅ `model-interpretation` (4 steps)
+   - ✅ `full-lifecycle` (10 steps) - Complete DS lifecycle
+   - ✅ `quick-eda` (4 steps) - Fast exploration
+   - ✅ `modeling-pipeline` (4 steps) - Model development
+   - ✅ `prototype-to-production` (5 steps) - Full deployment pipeline
+   - ✅ `data-quality-check` (4 steps) - Data validation
+   - ✅ `hyperparameter-optimization` (4 steps) - Advanced tuning
+   - ✅ `model-interpretation` (4 steps) - Model explainability
+   - ✅ `technical-report` (4 steps) - Technical documentation
+   - ✅ `executive-report` (single-step) - Executive summaries
+   - ✅ `build-dashboard` (4 steps) - Shiny dashboards
+   - ✅ `presentation-generation` (single-step) - Slide decks
+   - ✅ `deploy-model` (4 steps) - Vetiver API deployment
+   - ✅ `model-monitoring` (4 steps) - Production monitoring
 
 3. **Distribution and Installation** ✅ TESTED
 
@@ -277,17 +293,17 @@ The module was created through the complete BMB workflow:
 
 ## 📋 Status
 
-- ✅ BMAD Framework installed (v6.0.0-alpha.23)
+- ✅ BMAD Framework upgraded to **v6.2.2**
 - ✅ R Data Science Skills installed (20+ skills)
-- ✅ RDS Module created via BMB workflow
-- ✅ **4 Complete Agents**: Ada, Grace, Alan, Marie
-- ✅ **7 Complete Workflows**: full-lifecycle (148KB), quick-eda, modeling-pipeline (112KB), prototype-to-production, data-quality-check, hyperparameter-optimization (83KB), model-interpretation
-- ✅ Complete documentation (1,253 lines)
-- ✅ Validation: PASS (compliance verified)
-- ✅ **Distribution ready**: module.yaml + package.json
-- ✅ **Local installation tested**: Working in test project
+- ✅ RDS Module created and refactored via BMB workflows
+- ✅ **5 Complete Agents**: Ada, Grace, Alan, Marie (Reporter), Tim (Deployer)
+- ✅ **13 Complete Workflows**: 51 step files, comprehensive coverage
+- ✅ Complete documentation with CHANGELOG
+- ✅ Validation: **PASS** (100% compliance verified)
+- ✅ **Distribution ready**: module.yaml + package.json v0.2.0
+- ✅ **Production ready**: Full deployment and monitoring support
 
-**Last update:** 2026-03-17
+**Last update:** 2026-03-26 (v0.2.0 - Added Tim, refactored Marie, +6 workflows)
 
 ## 🔧 Versioning Strategy
 
@@ -332,14 +348,19 @@ The module was created through the complete BMB workflow:
 
 ## 🎯 Module Architecture
 
-**4 Specialized Agents:**
-- **Ada** (🏗️) — Project Architect — Phases 1-3
-- **Grace** (🔬) — Data Scientist — Phases 4-5
-- **Alan** (🤖) — ML Engineer — Phases 6-8
-- **Marie** (📊) — Communicator — Phases 9-10
+**5 Specialized Agents:**
+- **Ada** (🏗️) — Project Architect — Phases 1-3: Setup, Import, Cleaning
+- **Grace** (🔬) — Data Scientist — Phases 4-5: EDA, Feature Engineering
+- **Alan** (🤖) — ML Engineer — Phases 6-8: Modeling, Tuning, Evaluation
+- **Marie** (📊) — The Reporter — Phase 9: Reports, Dashboards, Presentations
+- **Tim** (🚀) — The Deployer — Phase 10: Deployment, Monitoring, Production
 
-**7 Workflows:**
-- **Core:** full-lifecycle, quick-eda, modeling-pipeline, prototype-to-production
-- **Specialized:** data-quality-check, hyperparameter-optimization, model-interpretation
+**13 Workflows:**
+- **Complete Lifecycle:** full-lifecycle (10 steps)
+- **Quick Workflows:** quick-eda, executive-report, presentation-generation
+- **Modeling:** modeling-pipeline, hyperparameter-optimization, model-interpretation
+- **Communication:** technical-report, build-dashboard
+- **Deployment:** deploy-model, model-monitoring, prototype-to-production
+- **Quality:** data-quality-check
 
 See complete documentation at [_bmad/rds/docs/](_bmad/rds/docs/)
