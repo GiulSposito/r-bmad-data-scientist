@@ -6,12 +6,14 @@
 # ============================================================================
 # BMAD Framework (instalado externamente)
 # ============================================================================
-# Ignorar framework BMAD completo - vem de instalação externa
-_bmad/
+# Ignorar framework BMAD - vem de instalação externa (core, bmb)
+_bmad/core/
+_bmad/bmb/
+_bmad/_config/
+_bmad/_bmad-output/
 
-# EXCEÇÃO: Versionar apenas customizações próprias do projeto
-!_bmad/_config/custom/
-!_bmad/rds/
+# EXCEÇÃO: Versionar módulo RDS desenvolvido neste projeto
+# !_bmad/rds/  # Não precisa de exceção, não está bloqueado acima
 
 # ============================================================================
 # Claude Code Skills (instalados externamente)
@@ -234,8 +236,8 @@ Rprof.out
 # ============================================================================
 # Documentation Build Artifacts
 # ============================================================================
-# pkgdown
-docs/
+# pkgdown (ignore only if in R package context)
+# docs/  # Commented out - we have project docs in docs/
 _pkgdown.yml
 
 # roxygen2
